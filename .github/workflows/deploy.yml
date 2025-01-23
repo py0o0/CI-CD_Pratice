@@ -34,7 +34,7 @@ jobs:
       # 도커 허브 로그인 -> 계정 정보 (닉네임, 도커 허브 토큰) -> 시크릿 변수
       # 도커 허브 토큰 -> 프로필 -> 어카운트 세팅 -> 퍼스널 액세스 토큰 -> 발급 -> read, write, delete 로 생성
       - name: 도커 허브 로그인
-        run: echo "${{ secrets.HUB_DOCKER_TOKEN }}" | docker login -u "${{ HUB_DOCKER_NAME }}" --password-stdin
+        run: echo "${{ secrets.HUB_DOCKER_TOKEN }}" | docker login -u "${{ secrets.HUB_DOCKER_NAME }}" --password-stdin
 
       # 백엔드 이미지 생성 -> 허브(레파지토리) 푸쉬
       - name: 백엔드 이미지 생성 -> 허브(레파지토리) 푸쉬
