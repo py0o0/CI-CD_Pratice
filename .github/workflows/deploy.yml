@@ -50,5 +50,5 @@ jobs:
 
       # ec2 서버로 필요 파일 업로드(YML, nginx/*.conf)
 
-  deploy:
+  #deploy:
       # 도커 컴포즈 진행
